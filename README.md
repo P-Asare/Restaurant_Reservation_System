@@ -4,13 +4,13 @@
 This project implements a Restaurant Reservation System designed to manage tables, bookings, and a waitlist for a restaurant.
 
 ## TABLE OF CONTENTS
-- [Getting Started]
-- [Folder Structure]
-- [Dependency Management]
-- [Installation]
-- [Usage]
-- [Contribution]
-- [Credits]
+- [Getting Started](#getting-started)
+- [Folder Structure](#folder-structure)
+- [Dependency Management](#dependency-management)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contribution](#contribution)
+- [Credits](#credits)
 
 ## GETTING STARTED 
 Welcome to the Restaurant Reservation System project! This guide helps you set up and work with the codebase in Visual Studio Code.
@@ -21,9 +21,8 @@ The workspace contains the following folders:
 - `src`: Contains the source code files.
 - `bin`: Holds the compiled output files.
 
-
 ## DEPENDENCY MANAGEMENT
-To manage dependencies for your Java projects, utilize the JAVA PROJECTS view in Visual Studio Code. Further details can be found in this guide.
+To manage dependencies for your Java projects, utilize the JAVA PROJECTS view in Visual Studio Code. Further details can be found in [this guide](link-to-dependency-management-guide).
 
 ## INSTALLATION
 Please follow these steps to install and set up the project:
@@ -58,7 +57,6 @@ The table management system within this project is organized as follows:
 - Free Tables are stored in a Tree.
 - Reservation bookings are associated with specific tables, linking reservation details with the respective table information.
 
-
 ### RESERVATION BOOKINGS 
 Reservation bookings in this project are structured as follows:
 
@@ -70,6 +68,5 @@ The waitlist management system encompasses:
 
 - A queue-based structure to manage the waitlist, where walk-in customers are added to the queue when they request a table but none are available.
 - The system handles dequeuing customers as tables become available, managing the order of seating based on the queue.
-
 
 All these structures facilitate efficient management of tables, reservation bookings, and waitlist requests within the restaurant system.
