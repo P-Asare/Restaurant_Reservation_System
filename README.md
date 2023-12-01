@@ -35,6 +35,7 @@ Please follow these steps to install and set up the project:
 1. Open the terminal.
 2. Navigate to the directory where you saved the file.
 3. Compile the app using `javac App.java`.
+4. Run the App.java
 
 The system supports the following functionalities:
 - Table management
