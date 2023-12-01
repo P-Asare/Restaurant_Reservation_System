@@ -13,7 +13,7 @@ public class App {
             while (true) {
                 System.out.println("The current occupancy status of the restaurant is: " + rest.occupancyStatus() + "tables free.");
 
-                System.out.println("Are you reserving a table (r), walking in (w)?");
+                System.out.println("Are you reserving a table (r), walking in (w), or quitting (q)?");
                 String choice = kb.nextLine().toLowerCase();
 
                 if (choice.equals("r")){
@@ -45,6 +45,10 @@ public class App {
                     rest.addWalkInCustomer(name);
                     System.out.println("You have been added to the waitlist. You will be given a table eventually.");
                     System.out.println();
+                }
+                else if (choice.equals("q")){
+                    System.out.println("Quitting...");
+                    break;
                 }
                 else {
                     System.out.println("Please enter the right kind of input.");
