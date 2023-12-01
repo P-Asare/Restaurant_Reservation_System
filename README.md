@@ -22,7 +22,8 @@ The workspace contains the following folders:
 - `bin`: Holds the compiled output files.
 
 ## DEPENDENCY MANAGEMENT
-To manage dependencies for your Java projects, utilize the JAVA PROJECTS view in Visual Studio Code. Further details can be found in [this guide](link-to-dependency-management-guide).
+To manage dependencies for your Java projects, 
+utilize the JAVA PROJECTS view in Visual Studio Code. 
 
 ## INSTALLATION
 Please follow these steps to install and set up the project:
