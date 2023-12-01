@@ -100,38 +100,4 @@ public class WaitList {
         size--;
         return toRemove;
     }
-
-    // public static void main(String[] args) {
-    //     WaitList myQ = new WaitList(5);
-
-    //     String one = "Palal";
-    //     String two = "Asare";
-    //     String three = "Chin";
-
-    //     try {
-    //         myQ.enqueue(one);
-    //         myQ.enqueue(two);
-    //         myQ.enqueue(three);
-
-    //         System.out.println(myQ.dequeue().getName());
-    //         System.out.println(myQ.dequeue().getName());
-    //         System.out.println(myQ.getSize());
-
-    //         myQ.enqueue(two);
-    //         myQ.enqueue(one);
-    //         myQ.enqueue(one);
-    //         myQ.enqueue(two);
-
-    //         System.out.println(myQ.getSize());
-
-    //         System.out.println(myQ.dequeue());
-    //         System.out.println(myQ.dequeue());
-
-    //         System.out.println(myQ.getSize());
-    //     } catch (Exception e) {
-    //         System.out.println(e.getMessage());
-    //     }
-    // }
-
-
 }

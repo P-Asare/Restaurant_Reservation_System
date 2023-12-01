@@ -6,20 +6,22 @@ public class Restaurant {
     private AvailableTables tables;
     private ReservationsBooking reservations;
     private WaitList waitListManagement;
-    private int reservationCapacity = 23; // limits the number of tables to 23 tables
-    private int waitListCapacity = 7; // allow a maximum of 7 waitlisters only
+    private int reservationCapacity;
+    private int waitListCapacity;
 
     /**
      * Constructor for a restaurant
-     * that allows a reservation capacity of 23
-     * and a waitlist capacity of 7
      * 
+     * @param reservationCapacity
+     * @param waitListCapacity
      * @throws Exception
      */
-    public Restaurant() throws Exception{
+    public Restaurant(int reservationCapacity, int waitListCapacity) throws Exception{
+        this.reservationCapacity = reservationCapacity; // for hashtable
+        this.waitListCapacity = waitListCapacity; // for waitlist queue
         tables = new AvailableTables();
-        reservations = new ReservationsBooking(reservationCapacity);
-        waitListManagement = new WaitList(waitListCapacity);
+        reservations = new ReservationsBooking(this.reservationCapacity);
+        waitListManagement = new WaitList(this.waitListCapacity);
         this.populateRestaurantTables();
     }
 

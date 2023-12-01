@@ -6,7 +6,7 @@ public class App {
         
         try {
             // A restaurant that can take 23 reservation bookings and 7 walk in bookings
-            Restaurant rest = new Restaurant();
+            Restaurant rest = new Restaurant(23, 7);
 
             System.out.println("Hi. Welcome to our restaurant booking platform");
 
