@@ -71,4 +71,4 @@ The waitlist management system encompasses:
 - The system handles dequeuing customers as tables become available, managing the order of seating based on the queue.
 
 
-##All these structures facilitate efficient management of tables, reservation bookings, and waitlist requests within the restaurant system.
+All these structures facilitate efficient management of tables, reservation bookings, and waitlist requests within the restaurant system.
