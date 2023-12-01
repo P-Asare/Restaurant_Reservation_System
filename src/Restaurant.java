@@ -6,8 +6,8 @@ public class Restaurant {
     private AvailableTables tables;
     private ReservationsBooking reservations;
     private WaitList waitListManagement;
-    private int reservationCapacity = 23;
-    private int waitListCapacity = 7;
+    private int reservationCapacity = 23; // limits the number of tables to 23 tables
+    private int waitListCapacity = 7; // allow a maximum of 7 waitlisters only
 
     /**
      * Constructor for a restaurant
@@ -34,13 +34,13 @@ public class Restaurant {
         ArrayList<Integer> capacities = new ArrayList<>();
         Random rand = new Random();
 
-        for (int i = 0; i <= reservationCapacity; i++){
+        for (; capacities.size() < reservationCapacity; ){
             int cap = rand.nextInt(reservationCapacity) + 1;
             if (capacities.contains(cap)) continue; // tables are not to have repeating seat capacities
 
             this.tables.insert(cap);
+            capacities.add(cap);
         }
-
     }
 
     /**
@@ -106,6 +106,18 @@ public class Restaurant {
         Table tbl = this.tables.search(criteria); // find table for customer in waitlist
         this.tables.removeOccupiedTable(criteria); // remove specified table
         this.reservations.insert(cName, tbl); // match the table to the customer as occupied or booked
+    }
+
+    /**
+     * Provides the number of occupied tables
+     * out of the number of available tables
+     * 
+     * @return String describing occupancy
+     */
+    public String occupancyStatus(){
+
+        int occupied = this.reservationCapacity - this.reservations.tableLength(); // calculate the free tables
+        return occupied + " out of " + this.reservationCapacity;
     }
     
 }

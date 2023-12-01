@@ -41,8 +41,6 @@ public class ReservationsBooking {
     public int primaryHash(String key){
 
         int hash = Math.abs(key.hashCode());
-        // System.out.println(hash);
-        // System.out.println(hash % this.capacity);
         return (hash % this.capacity);
     }
 
@@ -55,8 +53,6 @@ public class ReservationsBooking {
     public int secondaryHash(String key){
         int numToUse = nextPrime(this.capacity);
         int hash = Math.abs(key.hashCode());
-        // System.out.println(hash);
-        // System.out.println(numToUse - (hash % numToUse));
         return (numToUse - (hash % numToUse));
     }
 
@@ -214,21 +210,5 @@ public class ReservationsBooking {
         }
         return null;
     }
-
-    // public static void main(String[] args) {
-
-    //     try {
-    //         Table tableOne = new Table(12);
-
-    //         ReservationsBooking rb = new ReservationsBooking(11);
-    //         rb.insert("Palal", tableOne);
-    //         // rb.delete("Palal");
-    //         System.out.println(rb.retrieve("Palal"));
-
-    //     } catch (Exception e) {
-    //         System.out.println("Error");
-    //         System.out.println(e.getMessage());
-    //     }
-    // }
     
 }
