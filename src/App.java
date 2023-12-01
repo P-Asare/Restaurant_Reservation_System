@@ -11,9 +11,9 @@ public class App {
             System.out.println("Hi. Welcome to our restaurant booking platform");
 
             while (true) {
-                System.out.println("The current occupancy status of the restaurant is: " + rest.occupancyStatus() + "tables free.");
+                System.out.println("The current occupancy status of the restaurant is: " + rest.occupancyStatus() + " tables free.");
 
-                System.out.println("Are you reserving a table (r), walking in (w), or quitting (q)?");
+                System.out.println("Are you reserving a table (r), walking in (w), cancelling a reservation (c), or quitting (q)?");
                 String choice = kb.nextLine().toLowerCase();
 
                 if (choice.equals("r")){
@@ -49,6 +49,16 @@ public class App {
                 else if (choice.equals("q")){
                     System.out.println("Quitting...");
                     break;
+                }
+                else if (choice.equals("c")){
+                    System.out.println("Please enter your name: ");
+                    String name = kb.nextLine();
+
+                    rest.cancelReservation(name);
+
+                    System.out.println("Canceling...");
+                    System.out.println("Your reservation has been cancelled.");
+                    System.out.println();
                 }
                 else {
                     System.out.println("Please enter the right kind of input.");

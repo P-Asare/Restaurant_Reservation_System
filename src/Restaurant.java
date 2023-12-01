@@ -34,6 +34,8 @@ public class Restaurant {
         ArrayList<Integer> capacities = new ArrayList<>();
         Random rand = new Random();
 
+        // randomly assign table sizes for table objects
+        // random assignment to prevent binary tree from being unbalanced
         for (; capacities.size() < reservationCapacity; ){
             int cap = rand.nextInt(reservationCapacity) + 1;
             if (capacities.contains(cap)) continue; // tables are not to have repeating seat capacities
